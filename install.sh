@@ -1,10 +1,10 @@
 #!/bin/bash
 
 echo "🚀 Installing system dependencies..."
-sudo pacman -S --needed hyprland kitty dolphin stow git swww rofi hyprshot waybar
+sudo pacman -S --needed hyprland kitty dolphin stow git swww rofi hyprshot waybar pavucontrol
 
 echo "📦 Installing AUR dependencies (Themes & Fixes)..."
-paru -S --needed bibata-cursor-theme-bin
+paru -S --needed googledot-cursor-theme
 
 echo "🔗 Symlinking configuration files via Stow..."
 cd ~/.dotfiles

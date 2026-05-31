@@ -1,29 +1,52 @@
+@import "colours.css";
+
 * {
-    font-family: "Helvetica Neue", sans-serif;
     font-size: 14px;
-    font-weight: bold;
+    min-height: 0;
+    font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font";
 }
 
 window#waybar {
-    background-color: rgba(20, 20, 20, 0.85); /* Slick translucent dark background */
-    border-bottom: 2px solid #333333;
-    color: #ffffff;
+    background-color: alpha(@surface, 0.8);
+    color: @on_surface;
+}
+
+.modules-left {
+    padding-left: 14px;
+}
+
+.modules-right {
+    padding-right: 14px;
 }
 
 #workspaces button {
-    padding: 0 8px;
-    color: #aaaaaa;
-    background-color: transparent;
+    all: unset;
+    padding: 0 14px;
+    color: alpha(@on_surface_variant, 0.60);
 }
 
 #workspaces button.active {
-    color: #ffffff;
-    border-bottom: 2px solid #ffffff;
+    color: @primary;
+    font-weight: 600;
 }
 
-#clock, #pulseaudio, #network, #battery {
-    padding: 0 12px;
-    margin: 4px 2px;
-    background-color: #2a2a2a;
-    border-radius: 6px;
+#workspaces button:hover {
+    color: @on_surface;
+}
+
+#custom-clock {
+    color: @secondary;
+    padding: 0 5px;
+}
+
+#tray {
+    padding: 0 6px;
+}
+
+#battery.charging {
+    color: @primary;
+}
+
+#battery.critical {
+    color: @error;
 }

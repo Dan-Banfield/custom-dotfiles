@@ -1,32 +1,39 @@
 {
     "layer": "top",
-    "position": "top",
-    "height": 34,
-    "spacing": 4,
+    "position": "bottom",
+    "height": 37,
+    "spacing": 0,
     "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "network", "battery"],
+    "modules-center": ["custom/clock"],
+    "modules-right": ["pulseaudio", "battery"],
 
     "hyprland/workspaces": {
         "disable-scroll": true,
-        "all-outputs": true,
-        "active-only": false
+        "format": "{name}",
+        "persistent-workspaces": {
+            "*": [1, 2, 3, 4, 5]
+        }
     },
-    "clock": {
-        "format": "{:%I:%M %p - %a, %b %d}"
-    },
+
+	"custom/clock": {
+    	"exec": "date +'%-I:%M%p %A, %d %b'",
+    	"on-click": "gsimplecal",
+    	"interval": 1,
+    	"format": "<span color='#cec2db'> {}</span>"
+	},
+
     "pulseaudio": {
-        "format": "󰕾 {volume}%",
-        "format-muted": "󰝟 Muted",
+        "format": "<span color='#49454e'></span><span color='#cec2db'>vol</span> <span color='#958e99'>{volume}%</span>",
         "on-click": "pavucontrol"
     },
-    "network": {
-        "format-wifi": "  {essid}",
-        "format-ethernet": "󰈀 Wired",
-        "format-disconnected": "󰖪 Disconnected"
-    },
+
     "battery": {
-        "format": "{icon} {capacity}%",
-        "format-icons": ["󰁺", "󰁼", "󰁾", "󰂀", "󰁹"]
+        "format": "<span color='#49454e'>| </span><span color='#cec2db'>bat</span> <span color='#958e99'>{capacity}%</span>",
+        "format-charging": "<span color='#49454e'>| </span><span color='#cec2db'>ac:</span> <span color='#958e99'>{capacity}%</span>",
+        "states": {
+        "critical": 15
+    	},
+    	"tooltip": false,
+    	"interval": 20
     }
 }
