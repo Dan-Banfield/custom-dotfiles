@@ -1,0 +1,29 @@
+* {
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+window#waybar {
+    background-color: rgba(20, 20, 20, 0.85); /* Slick translucent dark background */
+    border-bottom: 2px solid #333333;
+    color: #ffffff;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    color: #aaaaaa;
+    background-color: transparent;
+}
+
+#workspaces button.active {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+#clock, #pulseaudio, #network, #battery {
+    padding: 0 12px;
+    margin: 4px 2px;
+    background-color: #2a2a2a;
+    border-radius: 6px;
+}

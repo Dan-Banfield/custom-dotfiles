@@ -1,14 +1,14 @@
 #!/bin/bash
 
 echo "🚀 Installing system dependencies..."
-sudo pacman -S --needed hyprland kitty dolphin stow git swww rofi hyprshot
+sudo pacman -S --needed hyprland kitty dolphin stow git swww rofi hyprshot waybar
 
 echo "📦 Installing AUR dependencies (Themes & Fixes)..."
 paru -S --needed bibata-cursor-theme-bin
 
 echo "🔗 Symlinking configuration files via Stow..."
 cd ~/.dotfiles
-stow hypr
+stow hypr waybar
 
 echo "✅ Setup complete!"
 

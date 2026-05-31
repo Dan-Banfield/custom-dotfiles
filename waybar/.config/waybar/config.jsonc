@@ -1,0 +1,32 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 34,
+    "spacing": 4,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "network", "battery"],
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "active-only": false
+    },
+    "clock": {
+        "format": "{:%I:%M %p - %a, %b %d}"
+    },
+    "pulseaudio": {
+        "format": "󰕾 {volume}%",
+        "format-muted": "󰝟 Muted",
+        "on-click": "pavucontrol"
+    },
+    "network": {
+        "format-wifi": "  {essid}",
+        "format-ethernet": "󰈀 Wired",
+        "format-disconnected": "󰖪 Disconnected"
+    },
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-icons": ["󰁺", "󰁼", "󰁾", "󰂀", "󰁹"]
+    }
+}
