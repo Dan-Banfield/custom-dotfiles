@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "🚀 Installing system dependencies..."
-sudo pacman -S --needed hyprland kitty dolphin stow git awww rofi hyprshot waybar pavucontrol ttf-jetbrains-mono-nerd
+sudo pacman -S --needed hyprland kitty dolphin stow git awww rofi hyprshot waybar pavucontrol ttf-jetbrains-mono-nerd zen-browser
 
 echo "📦 Installing AUR dependencies (Themes & Fixes)..."
 paru -S --needed googledot-cursor-theme
