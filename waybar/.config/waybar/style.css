@@ -43,6 +43,11 @@ window#waybar {
     padding: 0 6px;
 }
 
+#network,
+#pulseaudio {
+    padding: 0 10px;
+}
+
 #battery.charging {
     color: @primary;
 }

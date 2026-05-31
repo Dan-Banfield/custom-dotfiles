@@ -5,7 +5,7 @@
     "spacing": 0,
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["custom/clock"],
-    "modules-right": ["pulseaudio", "battery"],
+    "modules-right": ["pulseaudio", "battery", "network"],
 
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -21,6 +21,13 @@
     	"interval": 1,
     	"format": "<span color='#cec2db'> {}</span>"
 	},
+
+    "network": {
+        "format-wifi": "<span color='#cec2db'>󰖩 </span><span color='#958e99'>{essid}</span>",
+        "format-ethernet": "<span color='#cec2db'>󰈀 </span><span color='#958e99'>ethernet</span>",
+        "format-disconnected": "<span color='#cec2db'>󰖪 </span><span color='#958e99'>offline</span>",
+        "tooltip": false
+    },
 
     "pulseaudio": {
         "format": "<span color='#49454e'></span><span color='#cec2db'>vol</span> <span color='#958e99'>{volume}%</span>",
