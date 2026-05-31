@@ -2,7 +2,7 @@
 
 echo "🚀 Installing system dependencies..."
 # Core desktop packages
-sudo pacman -S --needed hyprland kitty dolphin stow git github-cli swww
+sudo pacman -S --needed hyprland kitty dolphin stow git github-cli swww rofi
 
 echo "📦 Installing AUR dependencies (Themes & Fixes)..."
 # Using yay for AUR packages
