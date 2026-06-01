@@ -13,7 +13,8 @@ if [ "$1" == "--toggle" ]; then
     if [ -f "$OVERRIDE_FILE" ]; then
         rm "$OVERRIDE_FILE"
         if [ "$IS_NIGHT_TIME" == "true" ]; then
-            hyprctl hyprsunset temperature 4000
+            hyprctl hyprsunset temperature 5000
+            hyprctl hyprsunset gamma 60
         else
             hyprctl hyprsunset identity
         fi
