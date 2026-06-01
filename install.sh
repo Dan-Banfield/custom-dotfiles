@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "🚀 Installing system dependencies..."
-sudo pacman -S --needed hyprland kitty dolphin stow git awww rofi hyprshot waybar pavucontrol ttf-jetbrains-mono-nerd zen-browser polkit-kde-agent hyprsunset nwg-look
+sudo pacman -S --needed hyprland kitty dolphin stow git awww rofi hyprshot waybar pavucontrol ttf-jetbrains-mono-nerd zen-browser polkit-kde-agent hyprsunset nwg-look hyprlock wlogout
 
 echo "📦 Installing AUR dependencies (Themes & Fixes)..."
 paru -S --needed apple_cursor qt6ct-kde
