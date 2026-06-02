@@ -6,6 +6,10 @@ sudo pacman -S --needed --noconfirm hyprland kitty dolphin stow git awww rofi hy
 echo "Installing Brave Origin Beta browser..."
 curl -fsS https://dl.brave.com/install.sh | FLAVOR=origin CHANNEL=beta sh
 
+echo "Installing Mullvad VPN..."
+sudo pacman -S --needed --noconfirm mullvad-vpn
+sudo systemctl enable --now mullvad-daemon
+
 echo "📦 Installing AUR dependencies (Themes & Fixes)..."
 paru -S --needed apple_cursor qt6ct-kde
 
