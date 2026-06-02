@@ -45,6 +45,7 @@ window#waybar {
 
 #network,
 #custom-nightlight,
+#tray,
 #pulseaudio {
     padding: 0 10px;
 }

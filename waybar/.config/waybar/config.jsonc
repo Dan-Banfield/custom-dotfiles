@@ -5,7 +5,7 @@
     "spacing": 0,
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["custom/clock"],
-    "modules-right": ["custom/nightlight", "pulseaudio", "battery", "network"],
+    "modules-right": ["tray", "custom/nightlight", "pulseaudio", "battery", "network"],
 
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -41,6 +41,11 @@
         "signal": 8,
         "format": "<span color='#cec2db'>{}</span>"
     },
+
+    "tray": {
+       "icon-size": 16,
+       "spacing": 10
+   },
 
     "battery": {
         "format": "<span color='#49454e'>| </span><span color='#cec2db'>bat</span> <span color='#958e99'>{capacity}%</span>",
