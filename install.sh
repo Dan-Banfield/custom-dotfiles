@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "🚀 Installing system dependencies..."
-sudo pacman -S --needed --noconfirm hyprland kitty dolphin stow git awww rofi hyprshot waybar pavucontrol ttf-jetbrains-mono-nerd polkit-kde-agent hyprsunset nwg-look hyprlock wlogout
+sudo pacman -S --needed --noconfirm hyprland kitty dolphin stow git awww rofi hyprshot waybar pavucontrol ttf-jetbrains-mono-nerd polkit-kde-agent hyprsunset nwg-look hyprlock wlogout mako
 
 echo "Installing Brave Origin Beta browser..."
 curl -fsS https://dl.brave.com/install.sh | FLAVOR=origin CHANNEL=beta sh
@@ -15,7 +15,7 @@ paru -S --needed apple_cursor qt6ct-kde
 
 echo "🔗 Symlinking configuration files via Stow..."
 cd ~/.dotfiles
-stow hypr waybar
+stow hypr waybar mako
 
 echo "Configuring system display manager..."
 sudo pacman -S --needed --noconfirm sddm
