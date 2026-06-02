@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "🚀 Installing system dependencies..."
-sudo pacman -S --needed --noconfirm hyprland kitty dolphin stow git awww rofi hyprshot waybar pavucontrol ttf-jetbrains-mono-nerd polkit-kde-agent hyprsunset nwg-look hyprlock wlogout mako
+sudo pacman -S --needed --noconfirm hyprland kitty dolphin stow git awww rofi hyprshot waybar pavucontrol ttf-jetbrains-mono-nerd polkit-kde-agent hyprsunset nwg-look hyprlock wlogout mako signal-desktop
 
 echo "Installing Brave Origin Beta browser..."
 curl -fsS https://dl.brave.com/install.sh | FLAVOR=origin CHANNEL=beta sh
