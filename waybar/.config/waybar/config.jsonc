@@ -5,7 +5,7 @@
     "spacing": 0,
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["custom/clock"],
-    "modules-right": ["tray", "custom/nightlight", "pulseaudio", "battery", "network"],
+    "modules-right": ["group/tray-drawer", "custom/nightlight", "pulseaudio", "battery", "network"],
 
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -42,9 +42,28 @@
         "format": "<span color='#cec2db'>{}</span>"
     },
 
-    "tray": {
-       "icon-size": 16,
-       "spacing": 10
+    "group/tray-drawer": {
+       "orientation": "horizontal",
+       "drawer": {
+           "transition-duration": 500,
+           "children-class": "collapsed-tray",
+           "transition-left-to-right": false,
+           "click-to-reveal": false
+       },
+       "modules": [
+           "custom/tray-toggle",
+           "tray"
+       ]
+   },
+
+   "tray": {
+        "icon-size": 16,
+        "spacing": 10
+   },
+
+   "custom/tray-toggle": {
+       "format": "^",
+       "tooltip": false
    },
 
     "battery": {

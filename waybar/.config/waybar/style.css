@@ -39,13 +39,14 @@ window#waybar {
     padding: 0 5px;
 }
 
-#tray {
+#custom-tray-toggle {
     padding: 0 6px;
 }
 
 #network,
 #custom-nightlight,
-#tray,
+#group-tray-drawer
+#custom-tray-toggle,
 #pulseaudio {
     padding: 0 10px;
 }
@@ -56,4 +57,9 @@ window#waybar {
 
 #battery.critical {
     color: @error;
+}
+
+#custom-tray-toggle {
+    color: #cec2db;
+    font-weight: bold;
 }
