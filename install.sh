@@ -15,7 +15,7 @@ paru -S --needed apple_cursor qt6ct-kde
 
 echo "🔗 Symlinking configuration files via Stow..."
 cd ~/.dotfiles
-stow hypr waybar mako rofi kitty fastfetch
+stow hypr waybar mako rofi kitty fastfetch wlogout
 
 echo "Configuring system display manager..."
 sudo pacman -S --needed --noconfirm sddm
