@@ -1,15 +1,12 @@
-/* Strip all default GTK theming */
 * {
     background-image: none;
     box-shadow: none;
 }
 
-/* Background overlay (Translucent Charcoal) */
 window {
     background-color: rgba(26, 26, 28, 0.90);
 }
 
-/* Base button matching the Rofi alternating row color */
 button {
     border-radius: 0px;
     border: 2px solid #49454e;
@@ -23,7 +20,6 @@ button {
     transition: all 0.2s ease-in-out;
 }
 
-/* Hover state matching the Rofi selection bar (Steel Blue & Lavender) */
 button:focus, button:active, button:hover {
     background-color: #3d4c57;
     border: 2px solid #cec2db;
@@ -31,10 +27,9 @@ button:focus, button:active, button:hover {
     outline-style: none;
 }
 
-/* Map the standard system icons */
-#lock { background-image: image(url("/usr/share/wlogout/icons/lock.png")); }
-#logout { background-image: image(url("/usr/share/wlogout/icons/logout.png")); }
-#reboot { background-image: image(url("/usr/share/wlogout/icons/reboot.png")); }
-#shutdown { background-image: image(url("/usr/share/wlogout/icons/shutdown.png")); }
-#hibernate { background-image: image(url("/usr/share/wlogout/icons/hibernate.png")); }
-#suspend { background-image: image(url("/usr/share/wlogout/icons/suspend.png")); }
+#lock { background-image: image(url("icons/lock.png")); }
+#logout { background-image: image(url("icons/logout.png")); }
+#reboot { background-image: image(url("icons/reboot.png")); }
+#shutdown { background-image: image(url("icons/shutdown.png")); }
+#hibernate { background-image: image(url("icons/hibernate.png")); }
+#suspend { background-image: image(url("icons/suspend.png")); }
