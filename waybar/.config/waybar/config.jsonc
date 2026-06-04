@@ -19,6 +19,7 @@
         "interval": 3,
         "format": "CPU {usage}%"
     },
+    
     "memory": {
         "interval": 3,
         "format": "RAM {}%"

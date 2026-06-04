@@ -43,6 +43,10 @@ window#waybar {
     padding: 0 6px;
 }
 
+#cpu {
+    margin-left: 280px;
+}
+
 #cpu,
 #memory {
     color: #cec2db;
