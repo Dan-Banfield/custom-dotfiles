@@ -43,9 +43,16 @@ window#waybar {
     padding: 0 6px;
 }
 
+#cpu,
+#memory {
+    color: #cec2db;
+    padding: 0px 10px;
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+}
+
 #network,
 #custom-nightlight,
-#group-tray-drawer
+#group-tray-drawer,
 #custom-tray-toggle,
 #pulseaudio {
     padding: 0 10px;
