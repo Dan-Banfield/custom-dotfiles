@@ -5,7 +5,7 @@
     "spacing": 0,
     "modules-left": ["hyprland/workspaces", "cpu", "memory"],
     "modules-center": ["custom/clock"],
-    "modules-right": ["group/tray-drawer", "custom/nightlight", "pulseaudio", "battery", "network"],
+    "modules-right": ["group/tray-drawer", "pulseaudio", "battery", "network"],
 
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -42,14 +42,6 @@
     "pulseaudio": {
         "format": "<span color='#49454e'></span><span color='#cec2db'>vol</span> <span color='#958e99'>{volume}%</span>",
         "on-click": "pavucontrol"
-    },
-
-    "custom/nightlight": {
-        "exec": "$HOME/.config/hypr/scripts/nightlight.sh",
-        "on-click": "$HOME/.config/hypr/scripts/nightlight.sh --toggle",
-        "interval": 30,
-        "signal": 8,
-        "format": "<span color='#cec2db'>{}</span>"
     },
 
     "group/tray-drawer": {
