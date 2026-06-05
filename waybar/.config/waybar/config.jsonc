@@ -16,12 +16,12 @@
     },
 
     "cpu": {
-        "interval": 3,
+        "interval": 2,
         "format": "CPU {usage}%"
     },
-    
+
     "memory": {
-        "interval": 3,
+        "interval": 2,
         "format": "RAM {}%"
     },
 
