@@ -38,6 +38,12 @@ DefaultBackground=/usr/share/backgrounds/login-bg.jpg
 Session=hyprland
 EOF
 
+echo "Configuring Dolphin open with..."
+mkdir -p ~/.config/menus
+if [ ! -f ~/.config/menus/applications.menu ]; then
+    curl -L https://raw.githubusercontent.com/KDE/plasma-workspace/master/menu/desktop/plasma-applications.menu -o ~/.config/menus/applications.menu
+fi
+
 echo "✅ Setup complete!"
 
 echo "Restarting in 5..."
