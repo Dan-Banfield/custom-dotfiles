@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "🚀 Installing system dependencies..."
-sudo pacman -S --needed --noconfirm hyprland kitty dolphin stow git awww rofi hyprshot waybar pavucontrol ttf-jetbrains-mono-nerd polkit-kde-agent hyprsunset nwg-look hyprlock wlogout mako signal-desktop ark kate flatpak
+sudo pacman -S --needed --noconfirm hyprland kitty dolphin stow git awww rofi hyprshot waybar pavucontrol ttf-jetbrains-mono-nerd polkit-kde-agent hyprsunset nwg-look hyprlock wlogout mako signal-desktop ark kate flatpak vscodium github-cli
 
 echo "Installing Brave Origin Beta browser..."
 curl -fsS https://dl.brave.com/install.sh | FLAVOR=origin CHANNEL=beta sh
@@ -11,7 +11,7 @@ sudo pacman -S --needed --noconfirm mullvad-vpn
 sudo systemctl enable --now mullvad-daemon
 
 echo "📦 Installing AUR dependencies (Themes & Fixes)..."
-paru -S --needed apple_cursor qt6ct-kde
+paru -S --needed apple_cursor qt6ct-kde hypremoji
 
 echo "🔗 Symlinking configuration files via Stow..."
 cd ~/.dotfiles
@@ -25,6 +25,9 @@ sudo mkdir -p /usr/share/backgrounds/
 if [ -f "$HOME/.dotfiles/hypr/.config/hypr/wallpaper.png" ]; then
     sudo cp "$HOME/.dotfiles/hypr/.config/hypr/wallpaper.png" /usr/share/backgrounds/login-bg.jpg
 fi
+
+echo "Setting wallpaper..."
+awww img "$HOME/.dotfiles/hypr/.config/hypr/wallpaper.png"
 
 sudo tee /etc/sddm.conf > /dev/null << 'EOF'
 [Theme]
