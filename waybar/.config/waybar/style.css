@@ -44,10 +44,13 @@ window#waybar {
 }
 
 #cpu {
-    margin-left: 280px;
+    margin-left: 110px;
 }
 
 #cpu,
+#temperature,
+#custom-gpu-usage,
+#custom-gpu-temp,
 #memory {
     color: #cec2db;
     padding: 0px 10px;

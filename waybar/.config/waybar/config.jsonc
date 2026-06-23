@@ -3,7 +3,7 @@
     "position": "bottom",
     "height": 37,
     "spacing": 0,
-    "modules-left": ["hyprland/workspaces", "cpu", "memory"],
+    "modules-left": ["hyprland/workspaces", "cpu", "temperature", "custom/gpu-usage", "custom/gpu-temp", "memory"],
     "modules-center": ["custom/clock"],
     "modules-right": ["group/tray-drawer", "pulseaudio", "battery", "network"],
 
@@ -18,6 +18,27 @@
     "cpu": {
         "interval": 2,
         "format": "CPU {usage}%"
+    },
+
+    "temperature": {
+        "interval": 10,
+        "critical-threshold": 80,
+        "format": "{temperatureC}°C <span color='#49454e'>│</span>",
+        "tooltip": false
+    },
+
+    "custom/gpu-usage": {
+        "interval": 2,
+        "exec": "cat /sys/class/drm/card*/device/gpu_busy_percent 2>/dev/null || echo 0",
+        "format": "GPU {}%",
+        "tooltip": false
+    },
+
+    "custom/gpu-temp": {
+        "interval": 10,
+        "exec": "sensors 2>/dev/null | grep -m1 'edge' | awk '{print $2}' | tr -d '+' | cut -d. -f1",
+        "format": "{}°C <span color='#49454e'>│</span>",
+        "tooltip": false
     },
 
     "memory": {
