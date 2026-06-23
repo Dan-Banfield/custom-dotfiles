@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "🚀 Installing system dependencies..."
-sudo pacman -S --needed --noconfirm hyprland kitty dolphin stow git awww rofi hyprshot waybar pavucontrol ttf-jetbrains-mono-nerd polkit-kde-agent hyprsunset nwg-look hyprlock wlogout mako signal-desktop ark kate flatpak vscodium github-cli
+sudo pacman -S --needed --noconfirm hyprland kitty dolphin stow git rofi hyprshot waybar pavucontrol ttf-jetbrains-mono-nerd polkit-kde-agent hyprsunset nwg-look hyprlock wlogout mako signal-desktop ark kate flatpak vscodium github-cli
 
 echo "Installing Brave Origin Beta browser..."
 curl -fsS https://dl.brave.com/install.sh | FLAVOR=origin CHANNEL=beta sh
@@ -11,7 +11,7 @@ sudo pacman -S --needed --noconfirm mullvad-vpn
 sudo systemctl enable --now mullvad-daemon
 
 echo "📦 Installing AUR dependencies (Themes & Fixes)..."
-paru -S --needed apple_cursor qt6ct-kde hypremoji
+paru -S --needed apple_cursor qt6ct-kde hypremoji mpvpaper
 
 echo "🔗 Symlinking configuration files via Stow..."
 cd ~/.dotfiles
